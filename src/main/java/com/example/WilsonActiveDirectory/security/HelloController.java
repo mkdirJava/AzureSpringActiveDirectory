@@ -11,7 +11,7 @@ import org.springframework.ui.Model;
 @RestController
 public class HelloController {
    @Autowired
-   @PreAuthorize("hasRole('Users')")
+   @PreAuthorize("hasRole('ROLE_USER')")
    @RequestMapping("/")
    public String helloWorld() {
       return "Hello World!";
